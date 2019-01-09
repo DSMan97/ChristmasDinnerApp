@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		07B81C9921E6677B00EC2DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81C9821E6677B00EC2DEB /* AppDelegate.swift */; };
 		07B81C9B21E6677B00EC2DEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81C9A21E6677B00EC2DEB /* ViewController.swift */; };
-		07B81C9E21E6677B00EC2DEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B81C9C21E6677B00EC2DEB /* Main.storyboard */; };
 		07B81CA021E6677C00EC2DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B81C9F21E6677C00EC2DEB /* Assets.xcassets */; };
 		07B81CA321E6677C00EC2DEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B81CA121E6677C00EC2DEB /* LaunchScreen.storyboard */; };
 		07B81CAE21E6677C00EC2DEB /* ChristmasDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CAD21E6677C00EC2DEB /* ChristmasDinnerTests.swift */; };
 		07B81CB921E6677C00EC2DEB /* ChristmasDinnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CB821E6677C00EC2DEB /* ChristmasDinnerUITests.swift */; };
+		07B81CC821E66A9100EC2DEB /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CC721E66A9100EC2DEB /* Participants.swift */; };
 		3799019E6F411CA443236A13 /* Pods_ChristmasDinnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31996FCA084E86F43325380C /* Pods_ChristmasDinnerTests.framework */; };
 		5FC883C2AD9293E66793B608 /* Pods_ChristmasDinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0B77800C778153F1457EE3 /* Pods_ChristmasDinner.framework */; };
 		96834E5B08217DC0DBF74EC5 /* Pods_ChristmasDinnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C2C4A71D8AA27464B85E7E /* Pods_ChristmasDinnerUITests.framework */; };
@@ -40,7 +40,6 @@
 		07B81C9521E6677B00EC2DEB /* ChristmasDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChristmasDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B81C9821E6677B00EC2DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07B81C9A21E6677B00EC2DEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		07B81C9D21E6677B00EC2DEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07B81C9F21E6677C00EC2DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B81CA221E6677C00EC2DEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07B81CA421E6677C00EC2DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		07B81CB421E6677C00EC2DEB /* ChristmasDinnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChristmasDinnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B81CB821E6677C00EC2DEB /* ChristmasDinnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasDinnerUITests.swift; sourceTree = "<group>"; };
 		07B81CBA21E6677C00EC2DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B81CC721E66A9100EC2DEB /* Participants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
 		19A70A99FC6FC018F8282AC9 /* Pods-ChristmasDinnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChristmasDinnerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChristmasDinnerTests/Pods-ChristmasDinnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A4B26360F1A11271DBD965A /* Pods-ChristmasDinnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChristmasDinnerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChristmasDinnerUITests/Pods-ChristmasDinnerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		31996FCA084E86F43325380C /* Pods_ChristmasDinnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChristmasDinnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +114,9 @@
 		07B81C9721E6677B00EC2DEB /* ChristmasDinner */ = {
 			isa = PBXGroup;
 			children = (
+				07B81CC621E66A5700EC2DEB /* Entities */,
 				07B81C9821E6677B00EC2DEB /* AppDelegate.swift */,
 				07B81C9A21E6677B00EC2DEB /* ViewController.swift */,
-				07B81C9C21E6677B00EC2DEB /* Main.storyboard */,
 				07B81C9F21E6677C00EC2DEB /* Assets.xcassets */,
 				07B81CA121E6677C00EC2DEB /* LaunchScreen.storyboard */,
 				07B81CA421E6677C00EC2DEB /* Info.plist */,
@@ -140,6 +140,14 @@
 				07B81CBA21E6677C00EC2DEB /* Info.plist */,
 			);
 			path = ChristmasDinnerUITests;
+			sourceTree = "<group>";
+		};
+		07B81CC621E66A5700EC2DEB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				07B81CC721E66A9100EC2DEB /* Participants.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		3E9ED78E47648D62767EB7E5 /* Pods */ = {
@@ -275,7 +283,6 @@
 			files = (
 				07B81CA321E6677C00EC2DEB /* LaunchScreen.storyboard in Resources */,
 				07B81CA021E6677C00EC2DEB /* Assets.xcassets in Resources */,
-				07B81C9E21E6677B00EC2DEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,16 +308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChristmasDinner/Pods-ChristmasDinner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -325,15 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChristmasDinner-checkManifestLockResult.txt",
 			);
@@ -347,15 +346,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChristmasDinnerTests-checkManifestLockResult.txt",
 			);
@@ -369,15 +364,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChristmasDinnerUITests-checkManifestLockResult.txt",
 			);
@@ -394,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B81C9B21E6677B00EC2DEB /* ViewController.swift in Sources */,
+				07B81CC821E66A9100EC2DEB /* Participants.swift in Sources */,
 				07B81C9921E6677B00EC2DEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,14 +422,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07B81C9C21E6677B00EC2DEB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07B81C9D21E6677B00EC2DEB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07B81CA121E6677C00EC2DEB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
