@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePopAddVC" customModule="ChristmasDinner" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAdd" destination="src-5E-USQ" id="LL7-4q-fIZ"/>
+                <outlet property="createPop" destination="RGd-HI-Exl" id="4Le-9c-raz"/>
+                <outlet property="enterName" destination="5Pv-PS-pzf" id="TwE-Zv-zAL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGd-HI-Exl">
+                    <rect key="frame" x="34" y="118" width="306" height="218"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="src-5E-USQ">
+                            <rect key="frame" x="123" y="180" width="46" height="30"/>
+                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="addNewParticipant" destination="-1" eventType="touchUpInside" id="5Ix-F4-i84"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-PS-pzf">
+                            <rect key="frame" x="17" y="80" width="281" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="src-5E-USQ" firstAttribute="top" secondItem="5Pv-PS-pzf" secondAttribute="bottom" constant="70" id="7Xo-MW-OO1"/>
+                        <constraint firstItem="5Pv-PS-pzf" firstAttribute="trailing" secondItem="RGd-HI-Exl" secondAttribute="trailingMargin" id="efI-a5-dcS"/>
+                        <constraint firstItem="5Pv-PS-pzf" firstAttribute="top" secondItem="RGd-HI-Exl" secondAttribute="top" constant="80" id="fhv-RG-WM4"/>
+                        <constraint firstItem="src-5E-USQ" firstAttribute="bottom" secondItem="RGd-HI-Exl" secondAttribute="bottomMargin" id="pOF-74-A7N"/>
+                        <constraint firstItem="5Pv-PS-pzf" firstAttribute="leading" secondItem="RGd-HI-Exl" secondAttribute="leading" constant="17" id="t60-Qh-aQw"/>
+                        <constraint firstItem="src-5E-USQ" firstAttribute="leading" secondItem="RGd-HI-Exl" secondAttribute="leading" constant="123" id="wE6-6w-MZI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RGd-HI-Exl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="XwK-jF-ARQ"/>
+                <constraint firstItem="RGd-HI-Exl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h4W-UI-EOY"/>
+                <constraint firstItem="RGd-HI-Exl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="98" id="p3x-hl-Wfj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-59.5" y="-45.5"/>
+        </view>
+    </objects>
+</document>
