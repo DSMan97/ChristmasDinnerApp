@@ -47,7 +47,7 @@ class ParticipantsViewController: UIViewController {
         
     }
     internal func registerCell(){
-        let identifier = "PCell"
+        let identifier = "ParticipantsTableViewCell"
         let nib = UINib(nibName: identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: identifier)
     }
@@ -65,11 +65,13 @@ class ParticipantsViewController: UIViewController {
 
 
 extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return participant.count
     }
-    
-  
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         participant[indexPath.row].paidState = !participant[indexPath.row].paidState
@@ -77,7 +79,7 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ParticipantsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PCell", for: indexPath) as! ParticipantsTableViewCell
+        let cell: ParticipantsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ParticipantsTableViewCell", for: indexPath) as! ParticipantsTableViewCell
         
         let participants = participant[indexPath.row]
         cell.lblNameP.text = participants.name
