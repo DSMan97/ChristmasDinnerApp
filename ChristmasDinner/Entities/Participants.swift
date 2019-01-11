@@ -11,25 +11,25 @@ import RealmSwift
 
 class Participants: Object{
     @objc dynamic var name = ""//name
-    @objc dynamic var id = "" //id
+    
     @objc dynamic var assistDate = Date() //Date of assintan
     @objc dynamic var paidState = false //Paid state
     
     
-    convenience init(id: String, name: String, assistDate: Date, paidState: Bool){
+    convenience init( name: String, assistDate: Date, paidState: Bool){
         self.init()
-        self.id = id
+        
         self.name = name
         self.assistDate = assistDate
         self.paidState = paidState
     }
     override static func primaryKey() -> String? { //set id as Primary Key
-        return "id"
+        return "name"
     }
     
     func participantModel() -> Participant {
         let model = Participant()
-        model.id = id
+       
         model.name = name
         model.assistDate = assistDate
         model.paidState = paidState

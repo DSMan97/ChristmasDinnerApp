@@ -10,7 +10,6 @@ import UIKit
 
 class Participant {
     var name: String!
-    var id: String!
     var assistDate = Date()
     var paidState = false
     

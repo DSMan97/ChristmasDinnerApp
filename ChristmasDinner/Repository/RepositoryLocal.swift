@@ -29,17 +29,6 @@ class RepositoryLocalParticipant: Repository{
         return participants
     }
     
-    func get(identifier:String) -> Participant?{
-        do {
-            let realm = try! Realm()
-            if let entity = realm.objects(Participants.self).filter("id == %@",identifier).first {
-                 let model = entity.participantModel()
-                return model
-            }
-            
-        }
-        return nil
-    }
     func get(name:String) -> Participant?{
         do {
             let realm = try! Realm()
@@ -51,11 +40,12 @@ class RepositoryLocalParticipant: Repository{
         }
         return nil
     }
+
     func create(a:Participant) -> Bool {
         do {
             let realm = try! Realm()
            
-            let entity = Participants(id: a.id, name: a.name, assistDate: a.assistDate, paidState: a.paidState)
+            let entity = Participants( name: a.name, assistDate: a.assistDate, paidState: a.paidState)
             try realm.write {
                
                 realm.add(entity, update: true)
@@ -71,7 +61,7 @@ class RepositoryLocalParticipant: Repository{
         do{
             let realm = try Realm()
             try realm.write {
-                let entryToDelete = realm.objects(Participants.self).filter("id == %@", a.id)
+                let entryToDelete = realm.objects(Participants.self).filter("name == %@", a.name)
                 realm.delete(entryToDelete)
             }
         }

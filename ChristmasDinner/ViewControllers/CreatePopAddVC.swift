@@ -44,7 +44,7 @@ class CreatePopAddVC: UIViewController {
     
     @IBAction func addNewParticipant() {
         let participant = Participant()
-        participant.id  = UUID().uuidString
+        //participant.id  = UUID().uuidString
         participant.name = enterName.text!
         participant.paidState = false
         
