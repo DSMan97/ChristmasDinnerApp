@@ -15,7 +15,7 @@ class RepositoryLocalParticipant: Repository{
         var participants: [Participant] = []
         
         do {
-            let entities = try Realm().objects(Participants.self).sorted(byKeyPath: "assistDate", ascending: true)
+            let entities = try Realm().objects(Participants.self).sorted(byKeyPath: "assistDate", ascending: false)
             
             for entity in entities {
                 let model = entity.participantModel()
