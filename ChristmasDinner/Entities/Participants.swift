@@ -18,8 +18,8 @@ class Participants: Object{
     
     convenience init(id: String, name: String, assistDate: Date, paidState: Bool){
         self.init()
-        self.name = name
         self.id = id
+        self.name = name
         self.assistDate = assistDate
         self.paidState = paidState
     }
@@ -30,6 +30,7 @@ class Participants: Object{
     func participantModel() -> Participant {
         let model = Participant()
         model.id = id
+        model.name = name
         model.assistDate = assistDate
         model.paidState = paidState
         return model

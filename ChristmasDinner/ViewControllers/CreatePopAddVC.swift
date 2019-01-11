@@ -48,7 +48,7 @@ class CreatePopAddVC: UIViewController {
         participant.name = enterName.text!
         participant.paidState = false
         
-        // animacion de transicion
+   
         UIView.animate(withDuration: 0.4, animations: {
             self.view.backgroundColor =
                 UIColor.white.withAlphaComponent(0.0)

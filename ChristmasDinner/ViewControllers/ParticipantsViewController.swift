@@ -27,7 +27,13 @@ class ParticipantsViewController: UIViewController {
         navigationItem.rightBarButtonItem = addBarButtonItem
     }
   
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.8){
+            self.view.backgroundColor =
+                UIColor.white.withAlphaComponent(0.8)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,7 +44,6 @@ class ParticipantsViewController: UIViewController {
         createVC.modalTransitionStyle = .coverVertical
         createVC.modalPresentationStyle = .overCurrentContext
         
-        // animacion de transicion
         UIView.animate(withDuration: 0.4, animations: {
             self.view.backgroundColor =
                 UIColor.white.withAlphaComponent(0.0)
@@ -73,6 +78,9 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
         return participant.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         participant[indexPath.row].paidState = !participant[indexPath.row].paidState
         tableView.reloadData()
@@ -101,7 +109,7 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
 }
 
 extension ParticipantsViewController: CreatePopAddVCDelegate {
-    func createPopAddVC(_ vc:CreatePopAddVC, didEditParticipant: Participant) {
+    func createPopAddVC(_ vc:CreatePopAddVC, didEditParticipant participants: Participant) {
         vc.dismiss(animated: true) {
             self.repository = RepositoryLocalParticipant()
             self.participant = self.repository.getAll()
