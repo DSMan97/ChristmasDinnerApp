@@ -47,8 +47,10 @@ class RepositoryLocalParticipant: Repository{
            
             let entity = Participants( name: a.name, assistDate: a.assistDate, paidState: a.paidState)
             try realm.write {
-               
-                realm.add(entity, update: true)
+                if(entity.name != ""){
+                   realm.add(entity, update: true)
+                }
+                
             }
             
         } catch {

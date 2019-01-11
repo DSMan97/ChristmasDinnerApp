@@ -91,6 +91,7 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
         
         let participants = participant[indexPath.row]
         cell.lblNameP.text = participants.name
+        cell.tickBox.image = UIImage(named: "Dollar")
         cell.tickBox.isHidden = !participants.paidState
         
         return cell
