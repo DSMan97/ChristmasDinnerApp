@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          window = UIWindow(frame: UIScreen.main.bounds)
         
         if let window = window {
-            let mainVContr = ParticipantsViewController()
+            let mainVContr = MainController()
             let navController = UINavigationController(rootViewController: mainVContr)
             window.rootViewController = navController
             window.makeKeyAndVisible()

@@ -1,15 +1,15 @@
 //
-//  ParticipantsViewController.swift
+//  PaidParticipantsVC.swift
 //  ChristmasDinner
 //
-//  Created by GUILLERMO CRESPO AGUAYO on 10/1/19.
+//  Created by GUILLERMO CRESPO AGUAYO on 11/1/19.
 //  Copyright © 2019 GUILLERMO CRESPO AGUAYO. All rights reserved.
 //
 
 import UIKit
 
-class ParticipantsViewController: UIViewController {
-
+class PaidParticipantsVC: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -19,67 +19,52 @@ class ParticipantsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.repository = RepositoryLocalParticipant()
-        self.participant = self.repository.getAll()
-
+       
         
-        title = "Participants"
-        tabBarController?.navigationItem.title = "Participants"
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
+         title = "Paid Participants"
+        tabBarController?.navigationItem.title = "Paid Participants"
         
-        self.tabBarController?.navigationItem.rightBarButtonItem = addBarButtonItem
+      
     
+        
         
         registerCell()
         
-       
         
-      
+        
     }
-  
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIView.animate(withDuration: 0.8){
             self.view.backgroundColor =
                 UIColor.white.withAlphaComponent(0.8)
         }
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @objc internal func addPressed () {
-        let createVC = CreatePopAddVC(repository)
-        createVC.delegate = self
-        createVC.modalTransitionStyle = .coverVertical
-        createVC.modalPresentationStyle = .overCurrentContext
-        
-        UIView.animate(withDuration: 0.4, animations: {
-            self.view.backgroundColor =
-                UIColor.white.withAlphaComponent(0.0)
-        })
-        present(createVC, animated: true, completion: nil)
-        
-    }
     internal func registerCell(){
-        let identifier = "ParticipantsTableViewCell"
+        let identifier = "PaidTableViewCell"
         let nib = UINib(nibName: identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: identifier)
+        
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 
-extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegate {
+extension PaidParticipantsVC : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -93,23 +78,26 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         participant[indexPath.row].paidState = !participant[indexPath.row].paidState
-       print("Nombre " + participant[indexPath.row].name + participant[indexPath.row].paidState.description)
-        let participants = participant[indexPath.row]
-        if(participants.paidState == true){
-            self.repository.update(a: participants)
-        }
+       
         tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ParticipantsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ParticipantsTableViewCell", for: indexPath) as! ParticipantsTableViewCell
+        let cell: PaidTableViewCell = tableView.dequeueReusableCell(withIdentifier: "PaidTableViewCell", for: indexPath) as! PaidTableViewCell
         
         let participants = participant[indexPath.row]
-        cell.lblNameP.text = participants.name
-        cell.tickBox.image = UIImage(named: "Dollar")
-        cell.tickBox.isHidden = !participants.paidState
-       
-        
+        if(participants.paidState==true){
+            cell.lblNameP.text = participants.name
+            cell.tickBox.image = UIImage(named: "Dollar")
+        }else{
+            repository.delete(a: participants)
+            participant.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    
+
         return cell
     }
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle , forRowAt indexPath: IndexPath) {
@@ -125,7 +113,7 @@ extension ParticipantsViewController : UITableViewDataSource, UITableViewDelegat
     }
 }
 
-extension ParticipantsViewController: CreatePopAddVCDelegate {
+extension PaidParticipantsVC: CreatePopAddVCDelegate {
     func createPopAddVC(_ vc:CreatePopAddVC, didEditParticipant participants: Participant) {
         vc.dismiss(animated: true) {
             self.repository = RepositoryLocalParticipant()
@@ -134,3 +122,4 @@ extension ParticipantsViewController: CreatePopAddVCDelegate {
         }
     }
 }
+

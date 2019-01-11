@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0749866421E8FAD100A68388 /* PaidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749866221E8FAD100A68388 /* PaidTableViewCell.swift */; };
+		0749866521E8FAD100A68388 /* PaidTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0749866321E8FAD100A68388 /* PaidTableViewCell.xib */; };
 		0751ECCA21E79F2000C3E961 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751ECC921E79F2000C3E961 /* Participant.swift */; };
 		0751ECCD21E7A1AA00C3E961 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751ECCC21E7A1AA00C3E961 /* Repository.swift */; };
 		0751ECCF21E7A63900C3E961 /* RepositoryLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751ECCE21E7A63900C3E961 /* RepositoryLocal.swift */; };
@@ -16,11 +18,14 @@
 		0751ECDD21E7ACD300C3E961 /* CreatePopAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0751ECDB21E7ACD300C3E961 /* CreatePopAddVC.xib */; };
 		0751ECE021E7B20A00C3E961 /* ParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751ECDE21E7B20A00C3E961 /* ParticipantsViewController.swift */; };
 		0751ECE121E7B20A00C3E961 /* ParticipantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0751ECDF21E7B20A00C3E961 /* ParticipantsViewController.xib */; };
+		079FD4C921E8EA3700C1FD0D /* PaidParticipantsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079FD4C721E8EA3700C1FD0D /* PaidParticipantsVC.swift */; };
+		079FD4CA21E8EA3700C1FD0D /* PaidParticipantsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079FD4C821E8EA3700C1FD0D /* PaidParticipantsVC.xib */; };
 		07B81C9921E6677B00EC2DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81C9821E6677B00EC2DEB /* AppDelegate.swift */; };
 		07B81CA021E6677C00EC2DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B81C9F21E6677C00EC2DEB /* Assets.xcassets */; };
 		07B81CAE21E6677C00EC2DEB /* ChristmasDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CAD21E6677C00EC2DEB /* ChristmasDinnerTests.swift */; };
 		07B81CB921E6677C00EC2DEB /* ChristmasDinnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CB821E6677C00EC2DEB /* ChristmasDinnerUITests.swift */; };
 		07B81CC821E66A9100EC2DEB /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B81CC721E66A9100EC2DEB /* Participants.swift */; };
+		07F4055421E8E46D00E6309E /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4055321E8E46D00E6309E /* MainController.swift */; };
 		3799019E6F411CA443236A13 /* Pods_ChristmasDinnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31996FCA084E86F43325380C /* Pods_ChristmasDinnerTests.framework */; };
 		5FC883C2AD9293E66793B608 /* Pods_ChristmasDinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0B77800C778153F1457EE3 /* Pods_ChristmasDinner.framework */; };
 		96834E5B08217DC0DBF74EC5 /* Pods_ChristmasDinnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C2C4A71D8AA27464B85E7E /* Pods_ChristmasDinnerUITests.framework */; };
@@ -44,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0749866221E8FAD100A68388 /* PaidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidTableViewCell.swift; sourceTree = "<group>"; };
+		0749866321E8FAD100A68388 /* PaidTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidTableViewCell.xib; sourceTree = "<group>"; };
 		0751ECC921E79F2000C3E961 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		0751ECCC21E7A1AA00C3E961 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		0751ECCE21E7A63900C3E961 /* RepositoryLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocal.swift; sourceTree = "<group>"; };
@@ -53,6 +60,8 @@
 		0751ECDB21E7ACD300C3E961 /* CreatePopAddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePopAddVC.xib; sourceTree = "<group>"; };
 		0751ECDE21E7B20A00C3E961 /* ParticipantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsViewController.swift; sourceTree = "<group>"; };
 		0751ECDF21E7B20A00C3E961 /* ParticipantsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantsViewController.xib; sourceTree = "<group>"; };
+		079FD4C721E8EA3700C1FD0D /* PaidParticipantsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidParticipantsVC.swift; sourceTree = "<group>"; };
+		079FD4C821E8EA3700C1FD0D /* PaidParticipantsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidParticipantsVC.xib; sourceTree = "<group>"; };
 		07B81C9521E6677B00EC2DEB /* ChristmasDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChristmasDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B81C9821E6677B00EC2DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07B81C9F21E6677C00EC2DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 		07B81CB821E6677C00EC2DEB /* ChristmasDinnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasDinnerUITests.swift; sourceTree = "<group>"; };
 		07B81CBA21E6677C00EC2DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B81CC721E66A9100EC2DEB /* Participants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
+		07F4055321E8E46D00E6309E /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		19A70A99FC6FC018F8282AC9 /* Pods-ChristmasDinnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChristmasDinnerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChristmasDinnerTests/Pods-ChristmasDinnerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A4B26360F1A11271DBD965A /* Pods-ChristmasDinnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChristmasDinnerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChristmasDinnerUITests/Pods-ChristmasDinnerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		31996FCA084E86F43325380C /* Pods_ChristmasDinnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChristmasDinnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +135,8 @@
 			children = (
 				0751ECD521E7AB0E00C3E961 /* ParticipantsTableViewCell.swift */,
 				0751ECD621E7AB0E00C3E961 /* ParticipantsTableViewCell.xib */,
+				0749866221E8FAD100A68388 /* PaidTableViewCell.swift */,
+				0749866321E8FAD100A68388 /* PaidTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -136,6 +148,9 @@
 				0751ECDB21E7ACD300C3E961 /* CreatePopAddVC.xib */,
 				0751ECDE21E7B20A00C3E961 /* ParticipantsViewController.swift */,
 				0751ECDF21E7B20A00C3E961 /* ParticipantsViewController.xib */,
+				07F4055321E8E46D00E6309E /* MainController.swift */,
+				079FD4C721E8EA3700C1FD0D /* PaidParticipantsVC.swift */,
+				079FD4C821E8EA3700C1FD0D /* PaidParticipantsVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,7 +352,9 @@
 				0751ECE121E7B20A00C3E961 /* ParticipantsViewController.xib in Resources */,
 				0751ECDD21E7ACD300C3E961 /* CreatePopAddVC.xib in Resources */,
 				07B81CA021E6677C00EC2DEB /* Assets.xcassets in Resources */,
+				079FD4CA21E8EA3700C1FD0D /* PaidParticipantsVC.xib in Resources */,
 				0751ECD821E7AB0E00C3E961 /* ParticipantsTableViewCell.xib in Resources */,
+				0749866521E8FAD100A68388 /* PaidTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +460,9 @@
 				07B81CC821E66A9100EC2DEB /* Participants.swift in Sources */,
 				0751ECD721E7AB0E00C3E961 /* ParticipantsTableViewCell.swift in Sources */,
 				0751ECDC21E7ACD300C3E961 /* CreatePopAddVC.swift in Sources */,
+				079FD4C921E8EA3700C1FD0D /* PaidParticipantsVC.swift in Sources */,
+				0749866421E8FAD100A68388 /* PaidTableViewCell.swift in Sources */,
+				07F4055421E8E46D00E6309E /* MainController.swift in Sources */,
 				0751ECCD21E7A1AA00C3E961 /* Repository.swift in Sources */,
 				07B81C9921E6677B00EC2DEB /* AppDelegate.swift in Sources */,
 				0751ECCA21E79F2000C3E961 /* Participant.swift in Sources */,
@@ -486,6 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -535,10 +559,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -546,6 +572,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -589,10 +619,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				NEW_SETTING = "";
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -732,7 +765,7 @@
 				07B81CBC21E6677C00EC2DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		07B81CBD21E6677C00EC2DEB /* Build configuration list for PBXNativeTarget "ChristmasDinner" */ = {
 			isa = XCConfigurationList;
@@ -741,7 +774,7 @@
 				07B81CBF21E6677C00EC2DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		07B81CC021E6677C00EC2DEB /* Build configuration list for PBXNativeTarget "ChristmasDinnerTests" */ = {
 			isa = XCConfigurationList;
@@ -750,7 +783,7 @@
 				07B81CC221E6677C00EC2DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		07B81CC321E6677C00EC2DEB /* Build configuration list for PBXNativeTarget "ChristmasDinnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -759,7 +792,7 @@
 				07B81CC521E6677C00EC2DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

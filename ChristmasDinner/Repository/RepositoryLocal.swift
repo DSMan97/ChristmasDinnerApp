@@ -10,6 +10,19 @@ import Foundation
 import RealmSwift
 
 class RepositoryLocalParticipant: Repository{
+    func get(paidState: String) -> Participant? {
+        do {
+            let realm = try! Realm()
+            if let entity = realm.objects(Participants.self).filter("name == %@",paidState.description).first {
+                let model = entity.participantModel()
+                return model
+            }
+            
+        }
+        return nil
+    }
+    
+    
     
     func getAll() -> [Participant]{
         var participants: [Participant] = []
@@ -29,6 +42,7 @@ class RepositoryLocalParticipant: Repository{
         return participants
     }
     
+   
     func get(name:String) -> Participant?{
         do {
             let realm = try! Realm()
